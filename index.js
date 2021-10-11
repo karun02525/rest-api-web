@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+const port =process.env.PORT || 3000 ;
+
 
 app.get('/.well-known/assetlinks.json', function (req, res) {
   res.json(
@@ -28,6 +30,6 @@ app.get('/hello', function (req, res) {
 
 
 
-app.listen(3000, function () {
+app.listen(port, function () {
   console.log('Example app listening on port 3000!');
 });
